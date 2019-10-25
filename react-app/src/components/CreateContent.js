@@ -10,6 +10,10 @@ class CreateContent extends Component {
               onSubmit={function(e){
                 e.preventDefault();
                 alert('Submit!!');
+                this.props.onSubmit(
+                  e.target.title.value,
+                  e.target.desc.value
+                );
               }.bind(this)}
             >
               <p>
